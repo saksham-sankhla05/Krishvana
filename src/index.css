@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+body {
+  background-image: linear-gradient(#eafce1bf, #eafce1bf),
+    url("images/bg-image.png");
+  background-size: 20%;
+  z-index: -2;
+  overflow-x: hidden;
+}
+
+.clip-wave {
+  clip-path: ellipse(100% 100% at 50% 0%);
+}
+
+.slick-list {
+  overflow: visible !important;
+  overflow-x: hidden !important;
+}
