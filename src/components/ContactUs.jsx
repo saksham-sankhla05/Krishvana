@@ -1,90 +1,76 @@
 function ContactUs() {
   return (
-    // Outer container for centering and applying a light background and Inter font
     <div className="relative">
       {/* Gradient Overlay */}
       <div className="absolute top-0 left-0 w-full h-full z-[-1] bg-gradient-to-t from-[#eaffe3] via-[#eaffe3d9] to-transparent pointer-events-none" />
 
       <div className="min-h-screen p-5 font-inter mt-10">
         <div className="text-center">
-          <h2 class="bg-gradient-to-r from-[#084838] to-[#6ab34e] inline-block text-transparent bg-clip-text text-[4rem] font-bold mb-4">
+          <h2 className="bg-gradient-to-r from-[#084838] to-[#6ab34e] inline-block text-transparent bg-clip-text text-[2.5rem] md:text-[4rem] font-bold mb-4">
             Contact Us
           </h2>
         </div>
-        <section className="max-w-[1300px] mx-auto w-full bg-green-50 p-8 md:p-12 rounded-lg shadow-lg">
-          {/* Contact Information Cards */}
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
-            {/* Phone Number Card */}
-            <div className="flex items-start p-6">
-              {/* Phone Icon */}
-              <div className="flex-shrink-0 mr-4 mt-1">
-                {" "}
+        <section className="max-w-[1300px] mx-auto w-full bg-green-50 p-6 md:p-12 rounded-lg shadow-lg">
+          {/* Contact Cards */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 mb-10">
+            {/* Card 1 - Phone */}
+            <div className="flex items-start gap-4 p-4 md:p-6">
+              <div className="flex-shrink-0 mt-1">
                 <svg
-                  className="w-10 h-10 text-green-600"
+                  className="w-8 h-8 md:w-10 md:h-10 text-green-600"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
                   <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.01 21 3 13.99 3 5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.57.12.35.03.75-.25 1.02l-2.2 2.2z" />
-                  <path fill="none" d="M0 0h24v24H0z" />
                 </svg>
               </div>
-              {/* Text content for the card */}
               <div>
-                {/* Card Title */}
-                <h3 className="text-xl font-semibold text-green-700 mb-2">
+                <h3 className="text-lg md:text-xl font-semibold text-green-700 mb-1">
                   Phone Number
                 </h3>
-                {/* Contact Detail */}
-                <p className="text-gray-600">+91 98290 11076</p>
+                <p className="text-sm md:text-base text-gray-600">
+                  +91 98290 11076
+                </p>
               </div>
             </div>
 
-            {/* Email Address Card */}
-            <div className="flex items-start p-6">
-              {/* Email Icon */}
-              <div className="flex-shrink-0 mr-4 mt-1">
+            <div className="flex items-start gap-4 p-4 md:p-6">
+              <div className="flex-shrink-0 mt-1">
                 <svg
-                  className="w-10 h-10 text-green-600"
+                  className="w-8 h-8 md:w-10 md:h-10 text-green-600"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
                   <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                  <path fill="none" d="M0 0h24v24H0z" />
                 </svg>
               </div>
-              {/* Text content for the card */}
-              <div>
-                {/* Card Title */}
-                <h3 className="text-xl font-semibold text-green-700 mb-2">
-                  Email Address
+              <div className="w-full">
+                <h3 className="text-lg md:text-xl font-semibold text-green-700 mb-1">
+                  Email
                 </h3>
-                {/* Contact Detail */}
-                <p className="text-gray-600">sandeepatkariya@krishvana.com</p>
+                <p className="break-all text-sm md:text-base text-gray-600">
+                  sandeepatkariya@krishvana.com
+                </p>
               </div>
             </div>
 
-            {/* Registered Address Card */}
-            <div className="flex items-start p-6">
-              {/* Location Icon */}
-              <div className="flex-shrink-0 mr-4 mt-1">
+            {/* Card 3 - Address */}
+            <div className="flex items-start gap-4 p-4 md:p-6">
+              <div className="flex-shrink-0 mt-1">
                 <svg
-                  className="w-10 h-10 text-green-600"
+                  className="w-8 h-8 md:w-10 md:h-10 text-green-600"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                  <path fill="none" d="M0 0h24v24H0z" />
                 </svg>
               </div>
-              {/* Text content for the card */}
               <div>
-                {/* Card Title */}
-                <h3 className="text-xl font-semibold text-green-700 mb-2">
+                <h3 className="text-lg md:text-xl font-semibold text-green-700 mb-1">
                   Registered Address
                 </h3>
-                {/* Contact Detail */}
-                <p className="text-gray-600">
+                <p className="text-sm md:text-base text-gray-600">
                   Krishvana Global Grains Pvt. Ltd. Plot # F-175, Industrial
                   Growth Center, Khara, Bikaner, Rajasthan, India - 334006
                 </p>

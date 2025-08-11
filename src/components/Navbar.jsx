@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,48 +11,43 @@ const Navbar = () => {
   return (
     <nav className="bg-[#fff] fixed w-[100%] z-20 shadow-nav">
       <div className="max-w-[1300px] m-auto">
-        <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+        <div className="lg:container mx-auto px-4 py-3 flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="h-10 w-15 flex items-center justify-center">
+            <div className="h-8 w-10 lg:h-10 lg:w-15 flex items-center justify-center">
               <img src="images/logo.png" alt="" />
             </div>
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-10">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-10">
             <Link
-              to="home"
-              smooth={true}
-              className="hover:text-[#83D050] text-primary hover:text-secondary hover:cursor-pointer transition-colors font-medium"
+              to="/#home"
+              className="hover:text-[#83D050] text-sm lg:text-primary hover:text-secondary hover:cursor-pointer transition-colors font-medium"
             >
               Home
             </Link>
             <Link
-              to="aboutus"
-              smooth={true}
-              className="hover:text-[#83D050] text-primary hover:text-secondary hover:cursor-pointer transition-colors font-medium"
+              to="/#aboutus"
+              className="hover:text-[#83D050] text-sm lg:text-primary hover:text-secondary hover:cursor-pointer transition-colors font-medium"
             >
               About Us
             </Link>
             <Link
-              to="manuprod"
-              smooth={true}
-              className="hover:text-[#83D050] text-primary hover:text-secondary hover:cursor-pointer transition-colors font-medium"
+              to="/#manuprod"
+              className="hover:text-[#83D050] text-sm lg:text-primary hover:text-secondary hover:cursor-pointer transition-colors font-medium"
             >
               Products
             </Link>
             <Link
-              to="whyus"
-              smooth={true}
-              className="hover:text-[#83D050] text-primary hover:text-secondary hover:cursor-pointer transition-colors font-medium"
+              to="/#whyus"
+              className="hover:text-[#83D050] text-sm lg:text-primary hover:text-secondary hover:cursor-pointer transition-colors font-medium"
             >
               Why Choose Us
             </Link>
             <Link
-              to="visionmission"
-              smooth={true}
-              className="hover:text-[#83D050] text-primary hover:text-secondary hover:cursor-pointer transition-colors font-medium"
+              to="/#visionmission"
+              className="hover:text-[#83D050] text-sm lg:text-primary hover:text-secondary hover:cursor-pointer transition-colors font-medium"
             >
               Vision & Mission
             </Link>
@@ -76,9 +71,11 @@ const Navbar = () => {
                 />
               </svg>
             </button>
-            <button className="hover:bg-[#83D050] hover:cursor-pointer bg-[#074737] text-[#fff] px-6 py-2 rounded-sm transition-colors shadow-sm">
-              Get in Touch
-            </button>
+            <Link to="/#contactus">
+              <button className="hover:bg-[#83D050] hover:cursor-pointer bg-[#074737] text-[#fff] px-6 py-2 rounded-sm transition-colors shadow-sm">
+                Get in Touch
+              </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
